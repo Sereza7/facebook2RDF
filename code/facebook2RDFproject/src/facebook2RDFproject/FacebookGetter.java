@@ -7,6 +7,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class FacebookGetter {
 		private String accessToken = "";
 		private String userId = "";
@@ -18,11 +21,21 @@ public class FacebookGetter {
 		}
 		
 		public FacebookGetter() {
-			this("869861266806845", "EAAEwblz0z1sBACh8Yrm5OoYXBfZAZBWn1x88QgkkZBCOd81GnhZAfmkZABNAR6zIhHidAo40gqkr7O58h8ueM7AZBvusB4fZATmhSDgJhkfO2ZBSFpGQg4S6ydZB0ESng8BEIg265ii2vxosqw541ZCIGpyuJUYRzeNkOXVBTQBIbchKaIXyoVRf4vZAJtxCvtZAyYMZD");
+			this("869861266806845", "EAAEwblz0z1sBAOmZClCMVQPBuYc0XehTUZAfTZC793R277jKqwXXuxdL8yzckgoGvUGXjv1iEHKY3WFf27EeOfnHUovlZCO5EwNysju43GKNWreQZBSR4CH0ZAvZAEzvV3ZCbTP4pHJtekcS8qzPsppvIYJvftWDE7lX3u2wWN1T6kOreKxr37TCXWSZBuvU4kteKkNKZBqqbgogZDZD");
 		}
 		
 		public void addField(String field) {
 			fields.add(field);
+		}
+		public String getFields() {
+			String concatenatedFields ="";
+			for (String field : fields) {
+				concatenatedFields+=field+",";
+			}
+			concatenatedFields=concatenatedFields.substring(0, concatenatedFields.length()-1);
+			System.out.println(concatenatedFields);
+			return concatenatedFields;
+			
 		}
 
 		public  StringBuffer request() throws IOException {
@@ -31,12 +44,7 @@ public class FacebookGetter {
 				 url = new URL("https://graph.facebook.com/"+this.userId+"?access_token="+this.accessToken);
 			}
 			else {
-				String concatenatedFields ="";
-				for (String field : fields) {
-					concatenatedFields+=field+",";
-				}
-				concatenatedFields=concatenatedFields.substring(0, concatenatedFields.length()-1);
-				System.out.println(concatenatedFields);
+				String concatenatedFields= this.getFields();
 				url = new URL("https://graph.facebook.com/"+this.userId+"?access_token="+this.accessToken+"&fields="+concatenatedFields);
 			}
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -59,5 +67,21 @@ public class FacebookGetter {
 			con.disconnect();
 			return content;
 	  }
+		public ArrayList<String> requestToAL(){
+			JSONObject obj = null;
+			try {
+				obj = new JSONObject(this.request(););
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ArrayList<String> result = new ArrayList<String>();
+			JSONArray parsed = obj.getJSONArray("interest");
+			for(int i = 0 ; i < parsed.length() ; i++){
+				result.add(parsed.getJSONObject(i).getString("interestKey"));
+			}
+	
+			
+		}
 		
 }
