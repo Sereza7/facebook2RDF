@@ -1,0 +1,703 @@
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"databases":["test12","myNewDB"]}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /admin/databases HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 34[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:39:20 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 34
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:39:20 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"databases":["test12","myNewDB"]}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: DELETE /admin/databases/myNewDB HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "DELETE /admin/databases/myNewDB HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> DELETE /admin/databases/myNewDB HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 66[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:39:21 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 66
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:39:21 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{ "message" : "The database 'myNewDB' was successfully dropped." }"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /admin/databases HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "POST /admin/databases HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Length: 231[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Type: multipart/form-data; boundary=CAX2V8t4m9zGw4xnozgm8N6P4xBnIRz[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> POST /admin/databases HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Content-Length: 231
+DEBUG main org.apache.http.headers - >> Content-Type: multipart/form-data; boundary=CAX2V8t4m9zGw4xnozgm8N6P4xBnIRz
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "CAX2V8t4m9zGw4xnozgm8N6P4xBnIRz"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Disposition"
+DEBUG main org.apache.http.wire -  >> ": "
+DEBUG main org.apache.http.wire -  >> "form-data; name="root""
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "{"dbname":"myNewDB","options":{"database.name":"myNewDB","index.type":"Disk"},"files":[],"copyToServer":false}"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "CAX2V8t4m9zGw4xnozgm8N6P4xBnIRz"
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 201 Created[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 56[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:39:21 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 56
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:39:21 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"message":"Successfully created database 'myNewDB'.\n"}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54058<->127.0.0.1:5820 closed
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54058<->127.0.0.1:5820 closed
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 0; route allocated: 0 of 200; total allocated: 0 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 1][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /myNewDB/authenticate?reasoning=false HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "WWW-Authenticate: Basic realm="Stardog"[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:39:21 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << WWW-Authenticate: Basic realm="Stardog"
+DEBUG main org.apache.http.headers - << Content-Length: 0
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:39:21 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication required
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - localhost:5820 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [Negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Selected authentication options: [BASIC [complete=true]]
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Generating response to an authentication challenge using basic scheme
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 2 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /myNewDB/authenticate?reasoning=false HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 1382[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:39:21 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 1382
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:39:21 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{[\n]"
+DEBUG main org.apache.http.wire -  << "  "options": {[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.preserve.bnode.ids": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "database.connection.timeout": {[\n]"
+DEBUG main org.apache.http.wire -  << "      "durationMS": 600000[\n]"
+DEBUG main org.apache.http.wire -  << "    },[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.pp.contexts": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "parser.edge.label": "labelE",[\n]"
+DEBUG main org.apache.http.wire -  << "    "parser.vertex.label": "labelV",[\n]"
+DEBUG main org.apache.http.wire -  << "    "index.statistics.cache.capacity": 1024,[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.describe.strategy": "default",[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.namespaces": [[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://api.stardog.com/"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "stardog",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "tag:stardog:api:"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "rdf",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "owl",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2002/07/owl#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "xsd",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2001/XMLSchema#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "rdfs",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2000/01/rdf-schema#"[\n]"
+DEBUG main org.apache.http.wire -  << "      }[\n]"
+DEBUG main org.apache.http.wire -  << "    ],[\n]"
+DEBUG main org.apache.http.wire -  << "    "edge.properties": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "strict.parsing": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.plan.reuse": "ALWAYS",[\n]"
+DEBUG main org.apache.http.wire -  << "    "database.name": "myNewDB",[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.all.graphs": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "virtual.transparency": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "graph.filter": "Instance",[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.handler.lang": {},[\n]"
+DEBUG main org.apache.http.wire -  << "    "extendedComparison": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "requiresClearedData": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "commitResult": {},[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.update.graph.diff": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "spilling.dir": ".spilling",[\n]"
+DEBUG main org.apache.http.wire -  << "    "docs.opennlp.models.path": {[\n]"
+DEBUG main org.apache.http.wire -  << "      "path": ""[\n]"
+DEBUG main org.apache.http.wire -  << "    }[\n]"
+DEBUG main org.apache.http.wire -  << "  }[\n]"
+DEBUG main org.apache.http.wire -  << "}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 1][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 1][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 0; route allocated: 0 of 200; total allocated: 0 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /admin/users/valid HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /admin/users/valid HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /admin/users/valid HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "WWW-Authenticate: Basic realm="Stardog"[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:26 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << WWW-Authenticate: Basic realm="Stardog"
+DEBUG main org.apache.http.headers - << Content-Length: 0
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:26 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication required
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - localhost:5820 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [Negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Selected authentication options: [BASIC [complete=true]]
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Generating response to an authentication challenge using basic scheme
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 2 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /admin/users/valid HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /admin/users/valid HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /admin/users/valid HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:27 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Length: 0
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:27 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /admin/databases HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 34[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:27 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 34
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:27 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"databases":["test12","myNewDB"]}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /admin/databases HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /admin/databases HTTP/1.1
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 34[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:27 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 34
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:27 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"databases":["test12","myNewDB"]}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: DELETE /admin/databases/myNewDB HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "DELETE /admin/databases/myNewDB HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> DELETE /admin/databases/myNewDB HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 66[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:27 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 66
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:27 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{ "message" : "The database 'myNewDB' was successfully dropped." }"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /admin/databases HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "POST /admin/databases HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Length: 235[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Type: multipart/form-data; boundary=kl0-o96-_Prcw2C34E9inf_5DYxGBN7Rk[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> POST /admin/databases HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Content-Length: 235
+DEBUG main org.apache.http.headers - >> Content-Type: multipart/form-data; boundary=kl0-o96-_Prcw2C34E9inf_5DYxGBN7Rk
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "kl0-o96-_Prcw2C34E9inf_5DYxGBN7Rk"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Content-Disposition"
+DEBUG main org.apache.http.wire -  >> ": "
+DEBUG main org.apache.http.wire -  >> "form-data; name="root""
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "{"dbname":"myNewDB","options":{"database.name":"myNewDB","index.type":"Disk"},"files":[],"copyToServer":false}"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "kl0-o96-_Prcw2C34E9inf_5DYxGBN7Rk"
+DEBUG main org.apache.http.wire -  >> "--"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 201 Created[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 56[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:28 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 56
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:28 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{"message":"Successfully created database 'myNewDB'.\n"}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection manager is shutting down
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54112<->127.0.0.1:5820 closed
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54112<->127.0.0.1:5820 closed
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection manager shut down
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:5820][total kept alive: 0; route allocated: 0 of 200; total allocated: 0 of 200]
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection leased: [id: 1][route: {}->http://localhost:5820][total kept alive: 0; route allocated: 1 of 200; total allocated: 1 of 200]
+DEBUG main org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:5820
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /myNewDB/authenticate?reasoning=false HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "WWW-Authenticate: Basic realm="Stardog"[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:28 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << HTTP/1.1 401 Unauthorized
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << WWW-Authenticate: Basic realm="Stardog"
+DEBUG main org.apache.http.headers - << Content-Length: 0
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:28 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication required
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - localhost:5820 requested authentication
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Authentication schemes in the order of preference: [Negotiate, Kerberos, NTLM, Digest, Basic]
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Negotiate authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Kerberos authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for NTLM authentication scheme not available
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Challenge for Digest authentication scheme not available
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Selected authentication options: [BASIC [complete=true]]
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: CHALLENGED
+DEBUG main org.apache.http.client.protocol.RequestTargetAuthentication - Generating response to an authentication challenge using basic scheme
+DEBUG main org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 2 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.wire -  >> "GET /myNewDB/authenticate?reasoning=false HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Accept: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "SD-Protocol: 4[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Host: localhost:5820[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "Authorization: Basic YWRtaW46YWRtaW4=[\r][\n]"
+DEBUG main org.apache.http.wire -  >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /myNewDB/authenticate?reasoning=false HTTP/1.1
+DEBUG main org.apache.http.headers - >> Accept: application/json
+DEBUG main org.apache.http.headers - >> SD-Protocol: 4
+DEBUG main org.apache.http.headers - >> Host: localhost:5820
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_191)
+DEBUG main org.apache.http.headers - >> Authorization: Basic YWRtaW46YWRtaW4=
+DEBUG main org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Content-Length: 1382[\r][\n]"
+DEBUG main org.apache.http.wire -  << "Date: Fri, 03 Apr 2020 07:42:28 GMT[\r][\n]"
+DEBUG main org.apache.http.wire -  << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Connection: keep-alive
+DEBUG main org.apache.http.headers - << Content-Type: application/json
+DEBUG main org.apache.http.headers - << Content-Length: 1382
+DEBUG main org.apache.http.headers - << Date: Fri, 03 Apr 2020 07:42:28 GMT
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Authentication succeeded
+DEBUG main org.apache.http.impl.client.TargetAuthenticationStrategy - Caching 'basic' auth scheme for http://localhost:5820
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Closing expired connections
+DEBUG main org.apache.http.wire -  << "{[\n]"
+DEBUG main org.apache.http.wire -  << "  "options": {[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.preserve.bnode.ids": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "database.connection.timeout": {[\n]"
+DEBUG main org.apache.http.wire -  << "      "durationMS": 600000[\n]"
+DEBUG main org.apache.http.wire -  << "    },[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.pp.contexts": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "parser.edge.label": "labelE",[\n]"
+DEBUG main org.apache.http.wire -  << "    "parser.vertex.label": "labelV",[\n]"
+DEBUG main org.apache.http.wire -  << "    "index.statistics.cache.capacity": 1024,[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.describe.strategy": "default",[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.namespaces": [[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://api.stardog.com/"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "stardog",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "tag:stardog:api:"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "rdf",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "owl",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2002/07/owl#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "xsd",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2001/XMLSchema#"[\n]"
+DEBUG main org.apache.http.wire -  << "      },[\n]"
+DEBUG main org.apache.http.wire -  << "      {[\n]"
+DEBUG main org.apache.http.wire -  << "        "prefix": "rdfs",[\n]"
+DEBUG main org.apache.http.wire -  << "        "name": "http://www.w3.org/2000/01/rdf-schema#"[\n]"
+DEBUG main org.apache.http.wire -  << "      }[\n]"
+DEBUG main org.apache.http.wire -  << "    ],[\n]"
+DEBUG main org.apache.http.wire -  << "    "edge.properties": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "strict.parsing": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.plan.reuse": "ALWAYS",[\n]"
+DEBUG main org.apache.http.wire -  << "    "database.name": "myNewDB",[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.all.graphs": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "virtual.transparency": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "graph.filter": "Instance",[\n]"
+DEBUG main org.apache.http.wire -  << "    "stark.io.handler.lang": {},[\n]"
+DEBUG main org.apache.http.wire -  << "    "extendedComparison": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "requiresClearedData": false,[\n]"
+DEBUG main org.apache.http.wire -  << "    "commitResult": {},[\n]"
+DEBUG main org.apache.http.wire -  << "    "query.update.graph.diff": true,[\n]"
+DEBUG main org.apache.http.wire -  << "    "spilling.dir": ".spilling",[\n]"
+DEBUG main org.apache.http.wire -  << "    "docs.opennlp.models.path": {[\n]"
+DEBUG main org.apache.http.wire -  << "      "path": ""[\n]"
+DEBUG main org.apache.http.wire -  << "    }[\n]"
+DEBUG main org.apache.http.wire -  << "  }[\n]"
+DEBUG main org.apache.http.wire -  << "}"
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection [id: 1][route: {}->http://localhost:5820] can be kept alive indefinitely
+DEBUG main org.apache.http.impl.conn.PoolingClientConnectionManager - Connection released: [id: 1][route: {}->http://localhost:5820][total kept alive: 1; route allocated: 1 of 200; total allocated: 1 of 200]

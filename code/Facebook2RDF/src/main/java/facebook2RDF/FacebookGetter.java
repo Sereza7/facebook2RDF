@@ -1,4 +1,4 @@
-package facebook2RDFproject;
+package facebook2RDF;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class FacebookGetter {
@@ -70,17 +71,27 @@ public class FacebookGetter {
 		public ArrayList<String> requestToAL(){
 			JSONObject obj = null;
 			try {
-				obj = new JSONObject(this.request(););
+				obj = new JSONObject(this.request());
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			ArrayList<String> result = new ArrayList<String>();
-			JSONArray parsed = obj.getJSONArray("interest");
-			for(int i = 0 ; i < parsed.length() ; i++){
-				result.add(parsed.getJSONObject(i).getString("interestKey"));
+			JSONArray parsed = null;
+			try {
+				parsed = obj.getJSONArray("interest");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-	
+			for(int i = 0 ; i < parsed.length() ; i++){
+				try {
+					result.add(parsed.getJSONObject(i).getString("interestKey"));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			return result;
 			
 		}
 		

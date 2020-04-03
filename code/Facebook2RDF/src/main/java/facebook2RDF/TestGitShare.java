@@ -1,6 +1,5 @@
-package facebook2RDFproject;
+package facebook2RDF;
 import java.io.*;
-import java.net.*;
 
 
 public class TestGitShare {
