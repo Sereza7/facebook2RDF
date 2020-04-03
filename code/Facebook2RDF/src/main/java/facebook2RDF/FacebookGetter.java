@@ -95,4 +95,12 @@ public class FacebookGetter {
 			
 		}
 		
+		public static void main(String[] args) throws IOException {
+			FacebookGetter getter = new FacebookGetter();
+			getter.addField("gender");
+			getter.addField("name");
+			StringBuffer result = getter.request();
+			System.out.println(result.toString());
+			
+	  }
 }

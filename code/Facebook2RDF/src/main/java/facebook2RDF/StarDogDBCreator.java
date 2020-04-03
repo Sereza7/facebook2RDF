@@ -15,6 +15,7 @@ public class StarDogDBCreator {
 	private static final String username = "admin";
 	private static final String password = "admin";
 	private static final String to = "myNewDB";
+	@SuppressWarnings("deprecation")
 	public static void createAdminConnection() {
 	    try (final AdminConnection aConn = AdminConnectionConfiguration.toServer(url)
 	            .credentials(username, password)

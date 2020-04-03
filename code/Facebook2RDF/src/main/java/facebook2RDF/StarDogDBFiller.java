@@ -56,65 +56,42 @@ public class StarDogDBFiller {
 	}
 	
 	public void addData(String dataLocation) throws StardogException, FileNotFoundException { 
-		// first start a transaction. This will generate the contents of
-		// the database from the N3 file.
+		Connection connection = connectionPool.obtain();
+		System.out.println("Connection is initialized");
 		connection.begin();
-		// declare the transaction
-		/*connection.add().io()
-		                .format(RDFFormat.RDFXML)
-		                .stream(new FileInputStream(dataLocation));*/
-	
+		
+		//describe the transaction
+		connection.add()
+						.io()
+						.format(RDFFormats.RDFXML)
+						.stream(new FileInputStream(dataLocation));
+		
 		// and commit the change
 		connection.commit();
+		System.out.println("Transaction Commited");
+		//at least, release the connection
 		connectionPool.release(connection);
+		System.out.println("Connection released at the end of transaction.");
+		
 		return;
 	}
 	
 	public static void main(String[] args) throws IOException {
 		
-		try (final AdminConnection aConn = AdminConnectionConfiguration.toServer(url)
-	            .credentials(username, password)
-	            .connect()) {
-
-	        // A look at what databases are currently in Stardog
-	        aConn.list().forEach(item -> System.out.println(item));
-
-	        // Checks to see if the 'myNewDB' is in Stardog. If it is, we are
-	        // going to drop it so we are starting fresh
-	        if (aConn.list().contains(to)) {aConn.drop(to);}
-	        // Convenience function for creating a persistent
-	        // database with all the default settings.
-	        aConn.disk(to).create();
-	        aConn.close();
-	    }
-		System.out.println("The adminConnexion is closed here...");
 		
 		StarDogDBFiller filler = new StarDogDBFiller();
 		ConnectionConfiguration connectionConfig = ConnectionConfiguration
 		        .to(to)
 		        .server(url)
-		        .reasoning(reasoningType)
 		        .credentials(username, password);
 		// creates the Stardog connection pool
-		ConnectionPool connectionPool = createConnectionPool(connectionConfig);
-	
-		//filler.connection = connectionPool.obtain();
-		System.out.println("connection pool initialized.");
-		//filler.addData("src/main/java/ontologies/Family_Control.owl");
-		Connection connection = connectionPool.obtain();
-		System.out.println("Connection is initialized");
+		filler.connectionPool = createConnectionPool(connectionConfig);
+		
 	
 		
-		connection.begin();
+		filler.addData("src/main/java/ontologies/Family_Control.owl");
 		
-		connection.add().io().format(RDFFormats.RDFXML).stream(new FileInputStream("src/main/java/ontologies/Family_Control.owl"));
-	
-		// and commit the change
-		connection.commit();
-		
-		//at least, release the connection
-		connectionPool.release(connection);
-		connectionPool.shutdown();
+		filler.connectionPool.shutdown();
 	}
 	
 }
