@@ -1,10 +1,29 @@
 package facebook2RDF;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.semanticweb.elk.owl.iris.ElkPrefix;
+import org.semanticweb.elk.owl.parsing.Owl2ParseException;
+import org.semanticweb.elk.owl.parsing.Owl2Parser;
+import org.semanticweb.elk.owl.parsing.Owl2ParserAxiomProcessor;
+import org.semanticweb.elk.owl.util.OwlObjectNameVisitor;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.OWLOntologyDocumentTarget;
+import org.semanticweb.owlapi.io.RDFXMLOntologyFormat;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.util.OWLAPIPreconditions;
+import org.semanticweb.owlapi.vocab.PrefixOWLOntologyFormat;
 
 import com.complexible.stardog.StardogException;
 import com.complexible.stardog.api.Connection;
@@ -13,7 +32,15 @@ import com.complexible.stardog.api.ConnectionPool;
 import com.complexible.stardog.api.ConnectionPoolConfig;
 import com.complexible.stardog.api.admin.AdminConnection;
 import com.complexible.stardog.api.admin.AdminConnectionConfiguration;
+import com.complexible.stardog.db.DatabaseOptions;
+import com.complexible.stardog.metadata.Metadata;
+import com.stardog.stark.Resource;
+import com.stardog.stark.Values;
 import com.stardog.stark.io.RDFFormats;
+import com.stardog.stark.vocabs.FOAF;
+import com.stardog.stark.vocabs.RDF;
+
+import uk.ac.manchester.cs.owl.owlapi.OWLDataFactoryImpl;
 
 public class StarDogDBFiller {
 	
@@ -32,6 +59,10 @@ public class StarDogDBFiller {
 	private ConnectionPool connectionPool;
 	private Connection connection;
 	
+	private OWLOntologyManager owlManager;
+	private String ontologyName = "FacebookDB";
+	private static String  nameSpace = "FacebookDB/";//must have a 
+
 
 	public StarDogDBFiller() {
 		
@@ -51,7 +82,7 @@ public class StarDogDBFiller {
 	            .maxPool(maxPool)
 	            .expiration(expirationTime, expirationTimeUnit)
 	            .blockAtCapacity(blockCapacityTime, blockCapacityTimeUnit);
-
+	    System.out.println("Creating Connection Pool.");
 	    return poolConfig.create();
 	}
 	
@@ -76,6 +107,50 @@ public class StarDogDBFiller {
 		return;
 	}
 	
+	/**
+	 * TODO complete this function to use the OWLAPI to write RDF file from triples. 
+	 * was having a hard time splitting external namespaces from the main one.
+	 * @param subject
+	 * @param relation
+	 * @param object
+	 * @throws OWLOntologyCreationException
+	 * @throws IOException
+	 * @throws OWLOntologyStorageException
+	 */
+	public void tripleToRDF(String subject, String relation, String object) throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
+		 owlManager = OWLManager.createConcurrentOWLOntologyManager();
+		 OWLOntology ontology = owlManager.createOntology(IRI.create(ontologyName));
+		 		 
+		 OWLDataFactory df = OWLManager.getOWLDataFactory();
+		 
+		 OWLObjectPropertyExpression relationO = df.getOWLObjectProperty(IRI.create(relation));
+		 OWLIndividual subjectO = df.getOWLNamedIndividual(IRI.create(subject));
+		 OWLIndividual objectO = df.getOWLNamedIndividual(IRI.create(object));
+		 
+		 owlManager.addAxiom(ontology, df.getOWLObjectPropertyAssertionAxiom(relationO, subjectO, objectO));
+		 
+		 File output = File.createTempFile("addTripleToStarDog","owl");
+		 owlManager.saveOntology(ontology, IRI.create(output));
+		 owlManager.removeOntology(ontology);
+		 
+		 //saves to the stardog db
+		 this.addData(output.getAbsolutePath());
+	}
+	
+	private void tripleToDB(String subject, String relation, String object) {
+		Connection connection = connectionPool.obtain();
+		System.out.println("Connection is initialized");
+		connection.begin();
+		connection.add()
+			.statement(Values.iri(subject),  Values.iri(relation), Values.iri(object));
+		connection.commit();
+		System.out.println("Transaction Commited");
+		//at least, release the connection
+		connectionPool.release(connection);
+		System.out.println("Connection released at the end of transaction.");
+	}
+	
+	
 	public static void main(String[] args) throws IOException {
 		
 		
@@ -89,9 +164,14 @@ public class StarDogDBFiller {
 		
 	
 		
-		filler.addData("src/main/java/ontologies/Family_Control.owl");
+		//filler.addData("src/main/java/ontologies/Family_Control.owl");
+		
+		filler.tripleToDB("FacebookDB"+":"+"Personi345", "rdfs:type","foaf"+":"+ "Person");
 		
 		filler.connectionPool.shutdown();
 	}
+
+
+	
 	
 }

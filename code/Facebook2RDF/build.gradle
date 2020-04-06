@@ -16,8 +16,9 @@ dependencies {
     // Core Dependencies
     compile ('com.complexible.stardog:client-http:6.1.0')
     compile ('com.stardog:stardog-spring:6.1.1')
-    compile "com.complexible.stardog:server:6.1.0"
-    compile files('/Users/lucas/Downloads/json-20190722.jar')
+    compile ("com.complexible.stardog:server:6.1.0")
+    compile('net.sourceforge.owlapi:owlapi-distribution:5.1.2')
+    compile files('json-20190722.jar')
 
     compile ('org.springframework:spring-core:4.3.10.RELEASE')
     compile ('org.springframework:spring-beans:4.3.10.RELEASE')
