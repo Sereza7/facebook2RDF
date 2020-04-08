@@ -1,7 +1,8 @@
 # facebook2RDF
 Social &amp; semantic web project.
 
-The goal of this project is to gather informations from the facebook graph api and to put it on a relational database using stardog.
+/!\ This project has no graphical interface and only consists of a list of services to connect Stardog with Java, and query the Facebook rest API./!\
+The authentification token of the user has to be generated beforehand for any use.
 
 Classes:
  - FacebookGetter makes it easier to get data from the facebook graph api.
